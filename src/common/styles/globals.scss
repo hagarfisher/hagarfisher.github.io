@@ -1,0 +1,16 @@
+$primary: #242038;
+$secondary: #8d86c9;
+$accent: #d81e5b;
+$neutral-gray: #cac4ce;
+$neutral-beige: #f7ece1;
+
+.large-title {
+  margin: 0;
+  font-weight: 600;
+
+  font-size: clamp(40px, 8vw, 80px);
+}
+.secondary-title {
+  line-height: 0.9;
+  font-weight: 500;
+}
