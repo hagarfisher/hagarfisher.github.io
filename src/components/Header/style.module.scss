@@ -1,20 +1,44 @@
 @import "./src/common/styles/globals.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;600&display=swap");
+.header {
+  display: flex;
+  margin: 0px 25px;
+  height: 15%;
+  backdrop-filter: blur(10px);
+  font-family: "Montserrat Alternates", sans-serif;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav-links {
+      color: $neutral-gray;
+      display: flex;
+      font-size: 1.1em;
+      .nav-link-icon {
+        font-size: 0.4em;
+        color: $accent;
+      }
+    }
+    .logo {
+      width: 10%;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
 
-.main-background {
-  background-color: $primary;
-  height: 100vh;
-
-  .title {
-    @extend .large-title;
-    color: $secondary;
-  }
-  .secondary-text {
-    color: $neutral-gray;
-    @extend .secondary-title;
-  }
-
-  .accent-element {
-    color: $accent;
-    font-size: 1.5em;
+    a {
+      display: inline-block;
+      text-decoration: none;
+      text-decoration-skip-ink: auto;
+      color: inherit;
+      position: relative;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+      &:hover {
+        color: $accent;
+      }
+    }
   }
 }
