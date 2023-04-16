@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import styles from "./style.module.scss";
 import React from "react";
 import Header from "../components/Header/Header";
+import Section from "../components/Section/Section";
+import Introduction from "../sections/Introduction/Introduction";
 function App() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -14,7 +16,9 @@ function App() {
   return (
     <div className={styles["main-container"]}>
       <Header />
-      <div className={styles.page}></div>
+      <div className={styles.sections}>
+        <Introduction />
+      </div>
     </div>
   );
 }

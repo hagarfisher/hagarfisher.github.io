@@ -1,15 +1,17 @@
 @import "../src/common/styles/globals.scss";
 
 .main-container {
-  background-color: $primary;
   height: 100%;
-  .page {
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .sections {
+    margin: 0 15vw;
   }
+  // .page {
+  //   padding: 10%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
   .title {
     @extend .large-title;
     color: $secondary;
