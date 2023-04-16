@@ -18,26 +18,25 @@
         font-size: 0.4em;
         color: $accent;
       }
-    }
-    .logo {
-      width: 10%;
-      &:hover {
-        opacity: 0.8;
+      a {
+        display: inline-block;
+        text-decoration: none;
+        text-decoration-skip-ink: auto;
+        color: inherit;
+        position: relative;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+        &:hover {
+          color: $accent;
+        }
       }
     }
-
-    a {
-      display: inline-block;
-      text-decoration: none;
-      text-decoration-skip-ink: auto;
-      color: inherit;
-      position: relative;
-      font-weight: 400;
-      display: flex;
-      align-items: center;
-      gap: 0.3em;
+    .logo {
+      width: 15%;
       &:hover {
-        color: $accent;
+        opacity: 0.8;
       }
     }
   }
