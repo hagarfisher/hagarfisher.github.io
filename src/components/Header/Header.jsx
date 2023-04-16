@@ -7,15 +7,16 @@ function Header() {
   const links = [
     { name: "About", path: "" },
     { name: "Experience", path: "" },
-    { name: "Work", path: "" },
+    { name: "Projects", path: "" },
     { name: "Contact", path: "" },
   ];
   return (
     <div className={styles["header"]}>
       <nav>
-        {/* icon */}
         {/* hamburger  on mobile*/}
-        <img className={styles.logo} src={logo} />
+        <a href="#">
+          <img className={styles.logo} src={logo} />
+        </a>
         <div className={styles["nav-links"]}>
           {links.map((link) => (
             <ul className={styles["nav-link"]}>
