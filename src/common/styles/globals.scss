@@ -2,12 +2,13 @@ $primary: #242038;
 $secondary: #8d86c9;
 $accent: #d81e5b;
 $neutral-gray: #cac4ce;
+$lighter-neutral-dray: #d7d2da;
+$darker-neutral-gray: #a096a7;
 $neutral-beige: #f7ece1;
 
 .large-title {
   margin: 0;
   font-weight: 600;
-
   font-size: clamp(40px, 8vw, 80px);
 }
 .secondary-title {
