@@ -13,10 +13,11 @@ function Header() {
   return (
     <div className={styles["header"]}>
       <nav>
-        {/* hamburger  on mobile*/}
-        <a href="#">
-          <img className={styles.logo} src={logo} />
-        </a>
+        <div className={styles["logo-container"]}>
+          <a href="#">
+            <img className={styles.logo} src={logo} />
+          </a>
+        </div>
         <div className={styles["nav-links"]}>
           {links.map((link) => (
             <ul className={styles["nav-link"]}>

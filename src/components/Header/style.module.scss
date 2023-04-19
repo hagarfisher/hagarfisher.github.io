@@ -1,18 +1,21 @@
 @import "./src/common/styles/globals.scss";
 .header {
   display: flex;
-  margin: 0px 25px;
+  margin: 0 25px;
   height: 15%;
-  backdrop-filter: blur(10px);
   font-family: "Montserrat Alternates", sans-serif;
   nav {
     display: flex;
     align-items: center;
+    width: 100%;
     justify-content: space-between;
     .nav-links {
+      // width: 2em;
       color: $neutral-gray;
       display: flex;
+
       font-size: 1.1em;
+
       .nav-link-icon {
         font-size: 0.4em;
         color: $accent;
@@ -33,7 +36,7 @@
       }
     }
     .logo {
-      width: 15%;
+      max-width: 80px;
       &:hover {
         opacity: 0.8;
       }
