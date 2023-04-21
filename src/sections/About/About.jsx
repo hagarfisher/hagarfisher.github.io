@@ -13,14 +13,14 @@ function About() {
     "Next.js",
     "SQL",
   ];
-  const lorem =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisl mauris, pretium sed sagittis vel, porttitor id ligula. Cras id orci diam. Nulla molestie mi ut lectus iaculis, ut auctor tellus sagittis. Mauris auctor euismod facilisis. Duis blandit consectetur felis, eu fermentum odio semper sed. Suspendisse vehicula porttitor arcu, quis blandit tellus placerat non. Nam eleifend in lorem quis congue. Curabitur volutpat velit at ante hendrerit vestibulum. Maecenas vel hendrerit mauris. Sed mattis nibh eu eleifend ultrices. Nam a justo ut massa posuere facilisis. Nulla commodo erat nec auctor fermentum. Nullam porttitor orci nisl, nec suscipit sapien fermentum nec.";
+  const aboutMeContent =
+    "Experienced full-stack engineer with 2 years of expertise in React and web development. Proficient in creating and managing applications using multiple programming languages, such as JavaScript, HTML, CSS, SQL, and Node.js. Proven ability to create efficient and reliable web solutions.";
   return (
     <Section title={"About me"} index={"1"} link={"about"}>
       <Paragraph>
         <div className={styles["about-container"]}>
           <div className={styles["content"]}>
-            <p>{lorem}</p>
+            <p>{aboutMeContent}</p>
             <div className={styles["bullet-list"]}>
               {technologies.map((item) => (
                 <Bullet content={item} />
