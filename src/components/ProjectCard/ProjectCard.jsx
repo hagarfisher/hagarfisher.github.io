@@ -14,7 +14,9 @@ function ProjectCard({ name, description, technologies, github }) {
       <h3>{name}</h3>
       <Paragraph>{description}</Paragraph>
       <p className={styles.technologies}>
-        {technologies.map((item) => `${item} `)}
+        {technologies.map((item) => (
+          <div>{`${item} `}</div>
+        ))}
       </p>
     </div>
   );
