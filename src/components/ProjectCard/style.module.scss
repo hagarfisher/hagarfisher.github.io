@@ -1,0 +1,35 @@
+@import "../src/common/styles/globals.scss";
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(141, 134, 201, 0.1);
+  height: 100%;
+  border-radius: 4px;
+  padding: 2em 1.75em 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  &:hover {
+    h3 {
+      color: $accent;
+    }
+  }
+  h3 {
+    color: $neutral-gray;
+  }
+  .icons {
+    display: flex;
+    justify-content: end;
+    color: $accent;
+    cursor: pointer;
+    a {
+      text-decoration: none;
+      text-decoration-skip-ink: auto;
+      color: inherit;
+    }
+  }
+  .technologies {
+    color: $darker-neutral-gray;
+    font-weight: 100;
+    font-family: "Montserrat Alternates", sans-serif;
+  }
+}

@@ -5,6 +5,7 @@ import Header from "../components/Header/Header";
 import About from "../sections/About/About";
 import Introduction from "../sections/Introduction/Introduction";
 import Experience from "../sections/Experience/Experience";
+import Projects from "../sections/Projects/Projects";
 function App() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
         <Introduction />
         <About />
         <Experience />
+        <Projects />
       </div>
     </div>
   );
