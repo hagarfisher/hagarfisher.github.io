@@ -21,7 +21,7 @@ function Projects() {
     },
   ];
   return (
-    <Section title={"Projects"} index={3} link={"projects"}>
+    <Section title="Projects" index={3} link="projects">
       <div className={styles["projects-container"]}>
         {projects.map((project) => (
           <ProjectCard
