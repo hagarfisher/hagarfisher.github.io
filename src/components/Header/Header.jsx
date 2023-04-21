@@ -5,10 +5,10 @@ import { FaRegCircle } from "react-icons/fa";
 
 function Header() {
   const links = [
-    { name: "About", path: "" },
-    { name: "Experience", path: "" },
-    { name: "Projects", path: "" },
-    { name: "Contact", path: "" },
+    { name: "About", path: "about" },
+    { name: "Experience", path: "experience" },
+    { name: "Projects", path: "projects" },
+    { name: "Contact", path: "contact" },
   ];
   return (
     <div className={styles["header"]}>
@@ -21,7 +21,7 @@ function Header() {
         <div className={styles["nav-links"]}>
           {links.map((link) => (
             <ul className={styles["nav-link"]}>
-              <a href="#">
+              <a href={`/#${link.path}`}>
                 <FaRegCircle className={styles["nav-link-icon"]} />
                 {link.name}
               </a>
