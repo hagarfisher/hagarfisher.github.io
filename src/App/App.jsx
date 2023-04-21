@@ -4,6 +4,7 @@ import React from "react";
 import Header from "../components/Header/Header";
 import About from "../sections/About/About";
 import Introduction from "../sections/Introduction/Introduction";
+import Experience from "../sections/Experience/Experience";
 function App() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -18,7 +19,8 @@ function App() {
       <Header />
       <div className={styles.sections}>
         <Introduction />
-        <About title={"About me"} index={"01"} />
+        <About />
+        <Experience />
       </div>
     </div>
   );
