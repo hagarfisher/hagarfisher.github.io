@@ -11,13 +11,23 @@ function Experience() {
       title: "B.Sc in Computer Science",
       company: "The Academic College of Tel Aviv–Yaffo",
       timeframe: "2019 - 2022",
+      content: [
+        "Finished with GPA of 82.5.",
+        "Took classes in Big Data, Web, Devops and Cyber security.",
+        "Collaborated with peers on various projects.",
+      ],
     },
     {
       category: "Work",
       title: "Full Stack Developer",
       company: "Responder",
       timeframe: "2021 - Present",
-      content: ["some text 1", "some text 2"],
+      content: [
+        "Developed, tested, and implemented web applications using React, Typescript, Nodejs, and SQL.",
+        "Increased customer upsell likelihood by implementing a prediction algorithm.",
+        "Enhanced sales department efficiency by building a tool to calculate monthly commissions.",
+        "Improved company decision-making by building data pipelines to gather and store deal data.",
+      ],
     },
   ];
 
