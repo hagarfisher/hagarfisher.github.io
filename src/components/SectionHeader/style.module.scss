@@ -6,6 +6,7 @@
   font-size: 2em;
   display: flex;
   align-items: center;
+
   &::after {
     content: "";
     flex: 1;
@@ -22,6 +23,9 @@
   }
 
   .bullet {
+    &::before {
+      content: "0";
+    }
     color: $accent;
     font-family: "Montserrat Alternates", sans-serif;
     margin-right: 0.8em;
