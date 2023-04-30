@@ -6,7 +6,7 @@ import logo from "../../assets/logo-no-background.svg";
 import { FaRegCircle, FaBars } from "react-icons/fa";
 
 function Header() {
-  const { isMobile } = { isMobile: true }; //  useDeviceDetect();
+  const { isMobile } = { isMobile: false }; //  useDeviceDetect();
   const links = [
     { name: "About", path: "about" },
     { name: "Experience", path: "experience" },
@@ -30,7 +30,7 @@ function Header() {
             {links.map((link) => (
               <ul className={styles["nav-link"]}>
                 <a href={`/#${link.path}`}>
-                  <FaRegCircle className={styles["nav-link-icon"]} />
+                  {/* <FaRegCircle className={styles["nav-link-icon"]} /> */}
                   {link.name}
                 </a>
               </ul>
