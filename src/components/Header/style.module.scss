@@ -1,19 +1,21 @@
 @import "./src/common/styles/globals.scss";
 .header {
   display: flex;
-  margin: 0 30px;
-  padding: 6px 0;
+  // margin: 0 30px;
+  padding: 6px 30px;
   height: 15%;
+  color: $neutral-gray;
   font-family: "Montserrat Alternates", sans-serif;
   nav {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    // margin-top: 12px;
+    .hamburger-container {
+    }
     .nav-links {
-      color: $neutral-gray;
       display: flex;
-
       font-size: 1.1em;
 
       .nav-link-icon {

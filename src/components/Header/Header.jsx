@@ -1,9 +1,12 @@
 import React from "react";
+import useDeviceDetect from "../../hooks/useDeviceDetect";
+
 import styles from "./style.module.scss";
 import logo from "../../assets/logo-no-background.svg";
-import { FaRegCircle } from "react-icons/fa";
+import { FaRegCircle, FaBars } from "react-icons/fa";
 
 function Header() {
+  const { isMobile } = { isMobile: true }; //  useDeviceDetect();
   const links = [
     { name: "About", path: "about" },
     { name: "Experience", path: "experience" },
@@ -18,16 +21,22 @@ function Header() {
             <img className={styles.logo} src={logo} />
           </a>
         </div>
-        <div className={styles["nav-links"]}>
-          {links.map((link) => (
-            <ul className={styles["nav-link"]}>
-              <a href={`/#${link.path}`}>
-                <FaRegCircle className={styles["nav-link-icon"]} />
-                {link.name}
-              </a>
-            </ul>
-          ))}
-        </div>
+        {isMobile ? (
+          <div className={styles["hamburger-container"]}>
+            <FaBars />
+          </div>
+        ) : (
+          <div className={styles["nav-links"]}>
+            {links.map((link) => (
+              <ul className={styles["nav-link"]}>
+                <a href={`/#${link.path}`}>
+                  <FaRegCircle className={styles["nav-link-icon"]} />
+                  {link.name}
+                </a>
+              </ul>
+            ))}
+          </div>
+        )}
       </nav>
     </div>
   );

@@ -27,6 +27,7 @@
   .tab-list {
     display: flex;
     flex-direction: column;
+
     .tab-button {
       font-family: "Montserrat Alternates", sans-serif;
       font-weight: 300;
@@ -54,6 +55,21 @@
         background-color: rgba(141, 134, 201, 0.07);
         color: $accent;
         border-color: $accent;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    .tab-list {
+      flex-direction: row;
+      .tab-button {
+        border: none;
+        border-bottom: 2px solid $extra-dark-neutral-gray;
       }
     }
   }
