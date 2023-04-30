@@ -7,14 +7,6 @@ import Introduction from "../sections/Introduction/Introduction";
 import Experience from "../sections/Experience/Experience";
 import Projects from "../sections/Projects/Projects";
 function App() {
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
-
   return (
     <div className={styles["main-container"]}>
       <Header />
