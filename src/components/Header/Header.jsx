@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import useDeviceDetect from "../../hooks/useDeviceDetect";
 
 import styles from "./style.module.scss";
@@ -6,7 +7,10 @@ import logo from "../../assets/logo-no-background.svg";
 import { FaRegCircle, FaBars } from "react-icons/fa";
 
 function Header() {
-  const { isMobile } = { isMobile: false }; //  useDeviceDetect();
+  const { isMobile } = { isMobile: true }; //  useDeviceDetect();
+
+  const [showDrawer, setShowDrawer] = useState(false);
+
   const links = [
     { name: "About", path: "about" },
     { name: "Experience", path: "experience" },
@@ -23,7 +27,9 @@ function Header() {
         </div>
         {isMobile ? (
           <div className={styles["hamburger-container"]}>
-            <FaBars />
+            <button onClick={() => setShowDrawer(!showDrawer)}>
+              <FaBars />
+            </button>
           </div>
         ) : (
           <div className={styles["nav-links"]}>
