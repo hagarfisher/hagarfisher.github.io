@@ -1,7 +1,10 @@
 @import "./src/common/styles/globals.scss";
 .header {
   display: flex;
-  // margin: 0 30px;
+  margin: 0 30px;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
   padding: 6px 30px;
   height: 15%;
   color: $neutral-gray;
@@ -11,12 +14,70 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    // margin-top: 12px;
-    .hamburger-container {
+    margin-top: 12px;
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 3em;
+      }
+      .nav-link {
+        display: flex;
+        gap: 9px;
+        &::before {
+          content: "▹";
+          color: $accent;
+          font-weight: 600;
+          margin-right: 0.2em;
+        }
+      }
+      button {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        margin-right: -15px;
+        padding: 15px;
+        border: 0px;
+        background-color: transparent;
+        color: inherit;
+        text-transform: none;
+        transition-timing-function: linear;
+        transition-duration: 0.15s;
+        transition-property: opacity, filter;
+      }
+      .drawer {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        padding: 50px 10px;
+        width: min(75vw, 400px);
+        height: 100vh;
+        outline: 0px;
+        background-color: $primary;
+        box-shadow: -10px 0px 30px -15px $dark-primary;
+        z-index: 9;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      }
+      .drawer-open {
+        transform: translateX(0vw);
+        visibility: visible;
+      }
+      .drawer-closed {
+        visibility: hidden;
+        transform: translateX(100vw);
+      }
     }
+
     .nav-links {
       display: flex;
       font-size: 1.1em;
+      gap: 30px;
 
       .nav-link-icon {
         font-size: 0.4em;

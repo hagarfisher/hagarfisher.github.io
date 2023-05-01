@@ -4,10 +4,10 @@ import useDeviceDetect from "../../hooks/useDeviceDetect";
 
 import styles from "./style.module.scss";
 import logo from "../../assets/logo-no-background.svg";
-import { FaRegCircle, FaBars } from "react-icons/fa";
+import { FaRegCircle, FaBars, FaTimes } from "react-icons/fa";
 
 function Header() {
-  const { isMobile } = { isMobile: true }; //  useDeviceDetect();
+  const { isMobile } = useDeviceDetect();
 
   const [showDrawer, setShowDrawer] = useState(false);
 
@@ -28,18 +28,44 @@ function Header() {
         {isMobile ? (
           <div className={styles["hamburger-container"]}>
             <button onClick={() => setShowDrawer(!showDrawer)}>
-              <FaBars />
+              {showDrawer ? (
+                <FaTimes size={"20px"} />
+              ) : (
+                <FaBars size={"20px"} />
+              )}
             </button>
+            <aside
+              className={
+                showDrawer
+                  ? `${styles["drawer-open"]} ${styles.drawer}`
+                  : `${styles["drawer-closed"]}  ${styles.drawer}`
+              }
+            >
+              <div className={styles["nav-links"]}>
+                {links.map((link) => (
+                  <div className={styles["nav-link"]}>
+                    <a
+                      onClick={() => {
+                        setTimeout(() => setShowDrawer(false), 300);
+                      }}
+                      href={`/#${link.path}`}
+                    >
+                      {link.name}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </aside>
           </div>
         ) : (
           <div className={styles["nav-links"]}>
             {links.map((link) => (
-              <ul className={styles["nav-link"]}>
+              <div className={styles["nav-link"]}>
                 <a href={`/#${link.path}`}>
                   {/* <FaRegCircle className={styles["nav-link-icon"]} /> */}
                   {link.name}
                 </a>
-              </ul>
+              </div>
             ))}
           </div>
         )}
