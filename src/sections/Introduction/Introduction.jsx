@@ -15,6 +15,13 @@ function Introduction() {
           className={styles["paragraph-text"]}
         >{`I am a full-stack developer passionate about creating innovative and functional web applications. I am working on various exciting projects in my current job and building personal projects to explore new technologies and improve my coding abilities.`}</p>
       </Paragraph>
+      <a
+        className={styles["contact-button"]}
+        href="mailto:hagarfisher@gmail.com"
+        target="_blank"
+      >
+        Contact Me
+      </a>
     </div>
   );
 }
