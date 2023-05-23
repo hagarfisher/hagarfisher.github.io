@@ -12,7 +12,7 @@ function Experience() {
       company: "The Academic College of Tel Aviv–Yaffo",
       timeframe: "2019 - 2022",
       content: [
-        "Finished with GPA of 82.5.",
+        "Finished with GPA of 83.",
         "Took classes in Big Data, Web, Devops and Cyber security.",
         "Collaborated with peers on various projects.",
       ],
@@ -39,7 +39,9 @@ function Experience() {
             return (
               <button
                 key={index}
-                className={styles["tab-button"]}
+                className={`${styles["tab-button"]} ${
+                  selectedExperience == index ? styles["selected-tab"] : ""
+                }`}
                 onClick={() => setSelectedExperience(index)}
               >
                 {item.category}
